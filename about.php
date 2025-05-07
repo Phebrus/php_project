@@ -6,17 +6,12 @@
   <title>Neon Game Showcase</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      background-color: #0f0f1c;
-      font-family: 'Orbitron', sans-serif;
-      padding: 20px;
-      color: #fff;
-      margin: 0;
-    }
+
 
     .center-wrapper {
       display: flex;
       justify-content: center;
+      margin-top: 20px;
     }
 
     .grid {
@@ -24,7 +19,7 @@
       grid-template-columns: 2fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: 16px;
-      width: 1200px;
+      width: 80%;
     }
 
     .game-card {
@@ -101,6 +96,7 @@
 </head>
 <body>
 
+<?php include_once __DIR__ . "/components/header.php"; ?>
   <div class="center-wrapper">
     <div class="grid">
       <!-- Left large card -->
@@ -128,6 +124,7 @@
       </div>
     </div>
   </div>
+
 
 </body>
 </html>

@@ -1,0 +1,43 @@
+.explore-section {
+    position: relative;
+    height: 900px;
+    background-image: url('https://i.ytimg.com/vi/Djtsw5k_DNc/maxresdefault.jpg');
+    box-shadow: inset 0px 0px 40px 40px rgba(0,0,0,0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.explore-button {
+    padding: 16px 32px;
+    background-color: #00ffff;
+    color: #0f0f1c;
+    width: 200px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #00ffff88;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .explore-content {
+text-align: center;
+color: white;
+}
+
+.explore-heading {
+font-size: 36px;
+color: #ffffff;
+text-shadow: 0 0 10px #00ffff;
+margin-bottom: 20px;
+max-width: 700px;
+padding: 0 20px;
+}
+.explore-button:hover {
+    background-color: #00cccc;
+    transform: scale(1.05);
+}

@@ -1,0 +1,73 @@
+body {
+    background-color: #0f1117;
+    font-family: 'Orbitron', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 0;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffff88;
+  }
+  
+  .logo a {
+    font-size: 26px;
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffffaa;
+  }
+  
+  nav {
+    background: #1b1f2a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #00ffff88;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffffaa;
+  }
+  
+  .nav-center {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .nav-right {
+    display: flex;
+  }
+  
+  .cart-icon {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  
+  /* Scale & glow base */
+/* Smooth base transition */
+nav a.scale-up {
+    transition: transform 0.15s ease, text-shadow 0.15s ease, color 0.15s ease;
+  }
+  
+  /* Scale and glow when active */
+  nav a.scaled {
+    transform: scale(1.12);
+    color: #00ffff;
+    text-shadow:
+      0 0 6px #00ffff,
+      0 0 12px #00ffff;
+  }
+  

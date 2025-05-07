@@ -1,0 +1,129 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: calc(216px * 6 + 64px);
+    margin: auto;
+    position: relative;
+  }
+  
+  .arrow {
+    background: #00ffff33;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-size: 28px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 0 10px #00ffff77;
+    z-index: 1001; /* Higher than hover-box */
+    position: relative;
+  }
+  
+  .arrow:hover {
+    background: #00ffff55;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: calc(216px * 5 + 64px);
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease;
+  }
+  
+  .game-card {
+    background: linear-gradient(145deg, #1a1a2e, #1f1f3b);
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px #0ff3, 0 0 20px #0ff2;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .game-card.rotating {
+    transform: rotateY(360deg);
+  }
+  
+  .game-card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px #0ff6, 0 0 40px #0ff9;
+  }
+  
+  .game-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .game-info {
+    padding: 12px;
+  }
+  
+  .tag {
+    background-color: #282c34;
+    color: #00ffe7;
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 3px 2px 0 0;
+    font-size: 11px;
+    border-radius: 4px;
+    text-shadow: 0 0 5px #00ffe7;
+  }
+  
+  .price {
+    color: #a4d007;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-shadow: 0 0 4px #a4d007;
+  }
+  
+  .checkout-btn {
+    display: block;
+    margin: 12px auto 0;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0f0f1c;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    text-shadow: none;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #00cccc;
+    transform: scale(1.05);
+  }
+  
+  .hover-box {
+    position: fixed;
+    background: #111f33;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff66;
+    z-index: 1000;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .hover-box.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  

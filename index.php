@@ -4,37 +4,25 @@ include 'condb.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div>
-                <a href="index.php">
-                    MySTORE 
-                </a>
-                <button type="button">
-                    <span></span>
-                </button>
-                <div>
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="store.php">Store</a></li>
-                        <li><a href="news.php">News</a></li>
-                        <li><a href="cart.php">Cart</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="fr_product.php">Admin</a></li>
-                        <li><a href="login.php">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php include_once __DIR__ . "/components/header.php"; ?>
     </header>
+
+    
+        <div class="explore-section">
+  <div class="explore-content">
+    <h1 class="explore-heading">Handle Business, Then Handle Boss Fights</h1>
+    <button class="explore-button" onclick="window.location.href='store.php'">Explore</button>
+  </div>
+        </div>
+
 
     <main>
         <div>
@@ -47,6 +35,7 @@ include 'condb.php';
         </div>
     </main>
 
+    <?php include_once __DIR__ . "/components/review.php"; ?>
     <section>
         <div>
             <h4>WE RECOMMEND</h4>
@@ -99,17 +88,9 @@ include 'condb.php';
         </div>
     </section>
 
-    <section>
-
-        <footer>
-            <div>
-                <hr>
-                <div>
-                    <p>Designed and Built by Saba</p>
-                </div>
-            </div>
-        </footer>
-    </section>
+                <footer>
+                    <?php include_once __DIR__ . "/components/footer.php"; ?>
+                </footer>
 </body>
 
 </html>

@@ -1,58 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-     body {
-      background-color: #0f1117;
-      font-family: 'Orbitron', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-    }
-
-    nav {
-      background: #1b1f2a;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 0 10px #00ffff88;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-      text-shadow: 0 0 5px #00ffffaa;
-    }
-</style>
-<body>
-    
+<link rel="stylesheet" href="/components/header.css">
 <nav>
-    <div class="logo">MyStore</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Store</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Cart</a></li>
-      <li><a href="#">Admin</a></li>
-      <li><a href="#">Log In</a></li>
-    </ul>
-  </nav>
+  <div class="logo"><a href="index.php">MyStore</a></div>
+  
+  <ul class="nav-center">
+    <li><a href="index.php">Home</a></li>
+    <li><a href="about.php">Store</a></li>
+    <li><a href="news.php">News</a></li>
+    <li><a href="cart.php">Cart</a></li>
+  </ul>
+  
+  <ul class="nav-right">
+    <li><a href="#">Admin</a></li>
+    <li><a href="#">/</a></li>
+    <li><a href="login.php">Log In</a></li>
+  </ul>
+</nav>
+<script>
+  const navLinks = document.querySelectorAll('nav a');
 
+  // Add base class to all nav links including logo
+  navLinks.forEach(link => link.classList.add('scale-up'));
 
-</body>
-</html>
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    navLinks.forEach(link => {
+      const rect = link.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const distance = Math.hypot(mouseX - centerX, mouseY - centerY);
+
+      // New tighter proximity threshold
+      if (distance < 40) {
+        link.classList.add('scaled');
+      } else {
+        link.classList.remove('scaled');
+      }
+    });
+  });
+</script>
