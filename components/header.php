@@ -12,7 +12,7 @@
   <ul class="nav-right">
     <li><a href="#">Admin</a></li>
     <li><a href="#">/</a></li>
-    <li><a href="login.php">Log In</a></li>
+    <li><a href="login.php">Sign In</a></li>
   </ul>
 </nav>
 <script>

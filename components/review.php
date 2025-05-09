@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/components/review.css">
+<h1 class="section-title">RECOMMENDED</h1>
 <div class="carousel-container">
   <button class="arrow" onclick="scrollCarousel(-1)">&#10094;</button>
 

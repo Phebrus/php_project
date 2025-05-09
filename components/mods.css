@@ -1,0 +1,100 @@
+    h2 {
+      color: #0ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 20px 30px;
+      font-size: 24px;
+    }
+
+    .calendar-container {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px 30px;
+      gap: 16px;
+    }
+
+    .main {   
+      margin-top: 30px;
+      }
+    .calendar-container::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .calendar-container::-webkit-scrollbar-track {
+      background: #1a1a2e;
+    }
+
+    .calendar-container::-webkit-scrollbar-thumb {
+      background-color: #0ff;
+      border-radius: 10px;
+      border: 2px solid #1a1a2e;
+    }
+
+    .calendar-container::-webkit-scrollbar-thumb:hover {
+      background-color: #0ff;
+      box-shadow: 0 0 6px #0ff;
+    }
+
+    .game-card {
+      min-width: 120px;
+      background-color: #1a1a2e;
+      border: 1px solid #0ff;
+      border-radius: 12px;
+      padding: 10px;
+      transition: transform 0.2s ease-in-out;
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-cover {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+      margin-bottom: 8px;
+    }
+
+    .release-date {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    .label {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background-color: #8000ff;
+      color: white;
+    }
+
+    .pink-border {
+      border-color: #ff3ec9;
+    }
+
+    .purple-border {
+      border-color: #b26eff;
+    }
+
+    .pink-label {
+      background-color: #ff3ec9;
+    }
+
+    .purple-label {
+      background-color: #b26eff;
+    }
+
+    .pink-date {
+      color: #ff3ec9;
+    }
+
+    .purple-date {
+      color: #b26eff;
+    }

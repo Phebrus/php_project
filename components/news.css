@@ -11,6 +11,13 @@
       border-radius: 12px;
       overflow: hidden;
     }
+    .section-title {
+        color: #0ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 20px 10px;
+      font-size: 24px;
+    }
     .main-video img {
       width: 100%;
       display: block;

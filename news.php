@@ -26,52 +26,6 @@ $result_product = mysqli_query($conn, $query_product);
     color: #e0e0e0;
 }
 
-a {
-    text-decoration: none;
-    color: #3b78e6;
-}
-
-a:hover {
-    color: #ff00cc;
-}
-
-.navbar {
-    background-color: #0b1521;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #3b78e6;
-}
-
-.navbar-brand {
-    font-size: 1.8rem;
-    color: #3b78e6;
-    font-weight: bold;
-}
-
-.neon-text {
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links li a {
-    font-size: 1rem;
-    color: #e0e0e0;
-    transition: 0.3s;
-}
-
-.nav-links li a.active {
-    color: #00ffff;
-    border-bottom: 2px solid #00ffff;
-}
-
 .login-btn, .admin {
     color: #00ff99 !important;
     font-weight: bold;
@@ -176,43 +130,15 @@ a:hover {
     background-color: #ff00cc;
 }
 
-footer {
-    background-color: #091b29;
-    color: #999;
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
-    border-top: 1px solid #3b78e6;
+a {
+    text-decoration: none;
 }
 
 </style>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">
-                    <span class="neon-text">🎮 GAMESTORE</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a class="active" href="store.php">Store</a></li>
-                    <li><a href="cart.php">Cart</a></li>
-                    <li><a class="admin" href="fr_product.php">For Admin</a></li>
-                    <li><a class="login-btn" href="fr_login.php">Login</a></li>
-                </ul>
-            </div>
-        </nav>
+         <?php include_once __DIR__ . "/components/header.php"; ?>
     </header>
-
-    <main class="main-content">
-        <section class="hero">
-            <div class="carousel">
-                <img src="images/scifi-4.jpg" alt="Banner">
-                <div class="carousel-caption">
-                    <h1>Welcome to our store</h1>
-                </div>
-            </div>
-        </section>
 
         <section class="store-section">
             <h1 class="store-heading">Our Store</h1>
@@ -234,10 +160,9 @@ footer {
             </div>
         </section>
 
-        <footer>
-            <p>Designed and Built by Pannisa</p>
-        </footer>
-    </main>
+   <footer>
+    <?php include_once __DIR__ . "/components/footer.php"; ?>
+</footer>
 </body>
 
 </html>
