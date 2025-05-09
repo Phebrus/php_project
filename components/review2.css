@@ -5,8 +5,8 @@
     overflow: hidden;
     max-width: calc(216px * 6 + 64px);
     margin: auto;
+    margin-top: auto;
     position: relative;
-    margin-top: 30px;
   }
   
   .arrow {
@@ -19,7 +19,7 @@
     cursor: pointer;
     transition: background 0.3s;
     box-shadow: 0 0 10px #00ffff77;
-    z-index: 1001; /* Higher than hover-box */
+    z-index: 1001; 
     position: relative;
   }
   

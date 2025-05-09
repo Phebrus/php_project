@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/components/header.css">
 <nav>
-  <div class="logo"><a href="index.php">MyStore</a></div>
+  <div class="logo"><a href="index.php">🎮 MyStore</a></div>
   
   <ul class="nav-center">
     <li><a href="index.php">Home</a></li>

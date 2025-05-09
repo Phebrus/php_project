@@ -1,0 +1,143 @@
+    .center-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+      width: 80%;
+    }
+
+    .game-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #0ff2, 0 0 20px #0ff4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .game-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .game-card:hover {
+      box-shadow: 0 0 20px #0ff4, 0 0 40px #0ff7;
+    }
+
+    .overlay-label {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: #ff0055;
+      color: white;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 4px;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .overlay-label.green {
+      background-color: #00ff99;
+      color: #000;
+    }
+
+    .game-title {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffe7;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    .wide {
+      grid-row: span 2;
+    }
+
+    .sale-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: #ff0055;
+      color: white;
+      padding: 6px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 0 0 10px #ff0055;
+    }
+
+    .free-section {
+  margin: 60px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #00ffee;
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px #00ffff80;
+}
+
+.free-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.free-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #00ffff50;
+}
+
+.free-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.free-card:hover img {
+  transform: scale(1.05);
+}
+
+.free-card:hover {
+  box-shadow: 0 0 20px #00ffffaa, 0 0 30px #00ffff88;
+}
+
+.label.free {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #00ff99;
+  color: #000;
+  font-size: 13px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-shadow: 0 0 4px #00000060;
+}

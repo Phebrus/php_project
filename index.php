@@ -15,7 +15,6 @@ include 'condb.php';
         <?php include_once __DIR__ . "/components/header.php"; ?>
     </header>
 
-    
         <div class="explore-section">
   <div class="explore-content">
     <h1 class="explore-heading">Handle Business, Then Handle Boss Fights</h1>
@@ -24,73 +23,113 @@ include 'condb.php';
         </div>
 
 
-    <main>
-        <div>
-            <h1>Game Store</h1>
-            <?php if (isset($_SESSION['username'])) : ?>
-                <p>Welcome <?php echo $_SESSION['username']; ?></p>
-            <?php endif ?>
-            <p>Discover games you will love</p>
-            <a href="store.php">Handle Business, Then Handle Boss Fights</a>
-        </div>
-    </main>
 
-    <?php include_once __DIR__ . "/components/review.php"; ?>
-    <section>
-        <div>
-            <h4>WE RECOMMEND</h4>
-            <div>
-                <div>
-                    <img src="https://i.ytimg.com/vi/Djtsw5k_DNc/maxresdefault.jpg">
-                    <div>
-                        <h5>Sea of thieves</h5>
-                        <p>Xbox Game Studios</p>
-                        <p>Sea of Thieves offers the essential pirate experience...</p>
-                        <p>฿460</p>
-                        <a href="store.php">See more</a>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="https://i.ytimg.com/vi/WYvw1ZZ9WyA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTe4AsDDcf4DrUeLm-q17cy2y-wg">
-                    <div>
-                        <h5>PUBG: BATTLEGROUNDS</h5>
-                        <p>KRAFTON, Inc.</p>
-                        <p>Land on strategic locations, loot weapons...</p>
-                        <p>฿99</p>
-                        <a href="store.php">See more</a>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="https://estaticos-cdn.prensaiberica.es/clip/882ee5d0-adde-4d02-9a48-984f80b550ab_mobile-ep-aspect-ratio_640w_0.jpg">
-                    <div>
-                        <h5>Dead by daylight</h5>
-                        <p>Behaviour Interactive Inc.</p>
-                        <p>Multiplayer (4vs1) horror game...</p>
-                        <p>฿330</p>
-                        <a href="store.php">See more</a>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3TV6GRC5cRq9gBbdqEdqlhlk5SfxqJZfzgc984AjzRbkT97rqbCWiDEvcUMmj1s1ZuU&usqp=CAU">
-                    <div>
-                        <h5>Dead by daylight</h5>
-                        <p>Behaviour Interactive Inc.</p>
-                        <p>Multiplayer (4vs1) horror game...</p>
-                        <p>฿330</p>
-                        <a href="store.php">See more</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </section>
+    <div style="margin-top: 20px;">
+            <?php include_once __DIR__ . "/components/calendar.php"; ?>
+    </div>
 
-                <footer>
-                    <?php include_once __DIR__ . "/components/footer.php"; ?>
-                </footer>
+    <div class="container">
+    <div class="main-video">
+      <img src="box2.png" alt="Top New Games of May 2025">
+      <div class="main-video-content">
+        <h2>Top New Games of May 2025</h2>
+        <p>May 2025 is packed with heavy hitters, cult comebacks, and a few surprises that could steal the spotlight. At Opera GX, we've handpicked the most exciting titles you won't want to miss. Quick breakdowns. Sharp picks. No filler.</p>
+        <button class="youtube-button">Watch on YouTube</button>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="mod_thumbnail.jpg" alt="Mods">
+        <div class="video-info">
+          <strong>Top 7 Opera GX Mods You Need to Try</strong>
+          <div class="tags">
+            <span class="tag">MOD</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="april2025.jpg" alt="April 2025">
+        <div class="video-info">
+          <strong>Top New Games of April 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="roblox_obby.jpg" alt="Hell's Obby">
+        <div class="video-info">
+          <strong>Hell's Obby Now on Roblox</strong>
+          <div class="tags">
+            <span class="tag">FUNNY</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="march2025.jpg" alt="March 2025">
+        <div class="video-info">
+          <strong>Top New Games of March 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+            <span class="tag">FUNNY</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="march2025.jpg" alt="March 2025">
+        <div class="video-info">
+          <strong>Top New Games of March 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+            <span class="tag">FUNNY</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="march2025.jpg" alt="March 2025">
+        <div class="video-info">
+          <strong>Top New Games of March 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+            <span class="tag">FUNNY</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="march2025.jpg" alt="March 2025">
+        <div class="video-info">
+          <strong>Top New Games of March 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+            <span class="tag">FUNNY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  -->
+  
+     <?php include_once __DIR__ . "/components/review.php"; ?>
+<!-- /////////// -->
+
+    <?php include_once __DIR__ . "/components/news.php" ?>
+
+</section>
+
+<footer>
+    <?php include_once __DIR__ . "/components/footer.php"; ?>
+</footer>
+
 </body>
 
 </html>

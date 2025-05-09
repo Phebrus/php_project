@@ -1,149 +1,243 @@
+<?php
+session_start();
+include('condb.php');
+
+$query_product = "SELECT * FROM game, genre
+WHERE game.genre_id = genre.genre_id 
+ORDER BY genre_name ASC";
+$result_product = mysqli_query($conn, $query_product);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily News</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-    body {
-  background-color: #0f1117;
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0b1521;
+    color: #e0e0e0;
 }
 
-.section-title {
-  padding: 20px;
-  color: #ccc;
-  text-shadow: 0 0 5px #00ffff88;
-  font-size: 20px;
+a {
+    text-decoration: none;
+    color: #3b78e6;
 }
 
-.filter-bar {
-  display: flex;
-  gap: 10px;
-  padding: 0 20px;
-  margin-bottom: 20px;
+a:hover {
+    color: #ff00cc;
 }
 
-.filter-bar button {
-  background: #1b1f2a;
-  color: #00ffff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+.navbar {
+    background-color: #0b1521;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3b78e6;
 }
 
-.filter-bar button:hover,
-.filter-bar button.active {
-  background: #00ffff;
-  color: #1b1f2a;
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #3b78e6;
+    font-weight: bold;
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 0 20px 40px;
+.neon-text {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-.news-card {
-  background: #1b1f2a;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 20px;
-  box-shadow: 0 0 10px #00ffff22;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
-.news-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px #00ffff88;
+.nav-links li a {
+    font-size: 1rem;
+    color: #e0e0e0;
+    transition: 0.3s;
 }
 
-.news-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  margin-bottom: 10px;
-  color: #ccc;
+.nav-links li a.active {
+    color: #00ffff;
+    border-bottom: 2px solid #00ffff;
 }
 
-.news-header .source {
-  color: #ff4757;
-  font-weight: bold;
+.login-btn, .admin {
+    color: #00ff99 !important;
+    font-weight: bold;
 }
 
-.news-header .category {
-  background: #2c3e50;
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-size: 11px;
-  color: #00ffff;
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
-.news-title {
-  font-size: 15px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+.carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
-.news-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.store-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, #0b1521, #000000);
+    text-align: center;
+}
+
+.store-heading {
+    color: #00ffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #091b29;
+    border: 1px solid #3b78e6;
+    border-radius: 10px;
+    width: 300px;
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(59, 120, 230, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    color: #00ffff;
+    margin-top: 1rem;
+}
+
+.product-card details summary {
+    cursor: pointer;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+.product-card p {
+    margin: 0.3rem 0;
+}
+
+.price {
+    color: #00ffcc;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.add-cart-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b78e6;
+    color: #fff;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.add-cart-btn:hover {
+    background-color: #ff00cc;
+}
+
+footer {
+    background-color: #091b29;
+    color: #999;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #3b78e6;
 }
 
 </style>
 <body>
-  <h2 class="section-title">DAILY NEWS</h2>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">
+                    <span class="neon-text">🎮 GAMESTORE</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="active" href="store.php">Store</a></li>
+                    <li><a href="cart.php">Cart</a></li>
+                    <li><a class="admin" href="fr_product.php">For Admin</a></li>
+                    <li><a class="login-btn" href="fr_login.php">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <div class="filter-bar">
-    <button class="active">All</button>
-    <button>Gaming</button>
-    <button>Technology</button>
-  </div>
+    <main class="main-content">
+        <section class="hero">
+            <div class="carousel">
+                <img src="images/scifi-4.jpg" alt="Banner">
+                <div class="carousel-caption">
+                    <h1>Welcome to our store</h1>
+                </div>
+            </div>
+        </section>
 
-  <section class="news-grid">
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">GamesRadar</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Talk To Me director's new horror movie Bring Her Back is being called...</h3>
-      <img src="https://i.imgur.com/uDK58GE.jpeg" alt="News Thumbnail">
-    </div>
+        <section class="store-section">
+            <h1 class="store-heading">Our Store</h1>
+            <div class="product-grid">
+                <?php foreach ($result_product as $row_pro) { ?>
+                    <div class="product-card">
+                        <img src="images/<?php echo $row_pro['image']; ?>" alt="Game Image">
+                        <h3><?php echo $row_pro['game_name']; ?></h3>
+                        <details>
+                            <summary>Description</summary>
+                            <p><?php echo $row_pro['description']; ?></p>
+                        </details>
+                        <p><strong>Publisher:</strong> <?php echo $row_pro['publisher']; ?></p>
+                        <p><strong>Genre:</strong> <?php echo $row_pro['genre_name']; ?></p>
+                        <p class="price"><?php echo $row_pro['price']; ?> Baht</p>
+                        <a href="add_to_cart.php?game_name=<?= $row_pro["game_name"] ?>&price=<?= $row_pro["price"] ?>" class="add-cart-btn">Add to cart</a>
+                    </div>
+                <?php } ?>
+            </div>
+        </section>
 
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Digital Trends</span>
-        <span class="category">Gaming</span>
-      </div>
-      <h3 class="news-title">8 intense and gripping movies like Sinners to watch next</h3>
-      <img src="https://i.imgur.com/VUONVkl.jpeg" alt="News Thumbnail">
-    </div>
-
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-
-    <!-- Add more .news-card items here -->
-  </section>
+        <footer>
+            <p>Designed and Built by Pannisa</p>
+        </footer>
+    </main>
 </body>
+
 </html>
