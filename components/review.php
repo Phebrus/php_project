@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/components/review.css">
+<link rel="stylesheet" href="/components/css/review.css">
 <h1 class="section-title">RECOMMENDED</h1>
 <div class="carousel-container">
   <button class="arrow" onclick="scrollCarousel(-1)">&#10094;</button>
@@ -170,7 +170,7 @@
     const card = button.closest('.game-card');
     card.classList.add('rotating');
     setTimeout(() => {
-      window.location.href = 'cart.php';
+      window.location.href = 'about.php';
     }, 800);
   }
 

@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="/components/newgames.css">
+ <link rel="stylesheet" href="/components/css/newgames.css">
  <div class="center-wrapper">
     <div class="grid">
       <!-- Left large card -->

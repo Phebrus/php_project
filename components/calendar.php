@@ -1,5 +1,5 @@
 
-  <link rel="stylesheet" href="/components/calendar.css">
+  <link rel="stylesheet" href="/components/css/calendar.css">
   <h2>Release Calendar</h2>
 
   <div class="calendar-container">

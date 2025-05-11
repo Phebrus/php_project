@@ -1,207 +1,58 @@
+<?php
+session_start();
+include 'condb.php';
+
+// If user is already logged in
+$loggedInUser = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GX Corner Videos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f111a;
-      color: #cdd6f4;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .main-video {
-      background-color: #1a1d2c;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .main-video img {
-      width: 100%;
-      display: block;
-    }
-
-    .main-video-content {
-      padding: 20px;
-    }
-
-    .main-video-content h2 {
-      margin-top: 0;
-      color: #00f0ff;
-    }
-
-    .youtube-button {
-      margin-top: 10px;
-      background-color: #ff5555;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .sidebar {
-      display: flex;
-      flex-direction: row;
-      overflow-x: auto;
-      overflow-y: hidden;
-      gap: 16px;
-      padding: 16px;
-      background: linear-gradient(90deg, #1f1f2f 0%, #12121c 100%);
-      border: 2px solid #00f0ff;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #00f0ff;
-      scrollbar-width: thin;
-      scrollbar-color: #00f0ff #0f111a;
-    }
-
-    .sidebar::-webkit-scrollbar {
-      height: 10px;
-    }
-
-    .sidebar::-webkit-scrollbar-track {
-      background: #0f111a;
-    }
-
-    .sidebar::-webkit-scrollbar-thumb {
-      background: #00f0ff;
-      border-radius: 10px;
-      box-shadow: 0 0 6px #00f0ff;
-    }
-
-    .video-item {
-      flex: 0 0 200px;
-      display: flex;
-      flex-direction: column;
-      background-color: rgba(26, 29, 44, 0.8);
-      border-radius: 8px;
-      padding: 10px;
-      transition: transform 0.3s, background 0.3s;
-      position: relative;
-    }
-
-    .video-item:hover {
-      background-color: rgba(36, 40, 60, 0.9);
-      transform: scale(1.05);
-    }
-
-    .video-item img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 8px;
-    }
-
-    .video-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .tags {
-      margin-top: 5px;
-    }
-
-    .tag {
-      background-color: #2c2f48;
-      color: #89b4fa;
-      border-radius: 4px;
-      padding: 2px 6px;
-      font-size: 12px;
-      margin-right: 5px;
-    }
-
-    .video-cover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s;
-      pointer-events: none;
-    }
-
-    .video-item:hover .video-cover {
-      opacity: 1;
-    }
-
-    .video-icon {
-      width: 24px;
-      height: 24px;
-      background-color: #00f0ff;
-      mask: url('https://cdn-icons-png.flaticon.com/512/0/375.png') no-repeat center;
-      mask-size: contain;
-      -webkit-mask: url('https://cdn-icons-png.flaticon.com/512/0/375.png') no-repeat center;
-      -webkit-mask-size: contain;
-    }
-  </style>
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="/components/css/login.css">
 </head>
 <body>
-  <div class="container">
 
-    <!-- Horizontal sidebar scroll -->
-    <h1>session_destroy</h1>
-    <div class="sidebar">
-      <div class="video-item">
-        <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="mod_thumbnail.jpg" alt="Mods">
-        <div class="video-info">
-          <strong>Top 7 Opera GX Mods You Need to Try</strong>
-          <div class="tags">
-            <span class="tag">MOD</span>
-          </div>
-        </div>
+  <div class="form-container">
+    <h2 id="form-title">Login</h2>
+    <form id="authForm" method="post" action="login_db.php">
+      <input type="hidden" id="mode" name="mode" value="login" />
+      <input type="email" name="email" id="email" placeholder="Email" required />
+      <input type="text" name="username" id="username" placeholder="Username" />
+      <input type="password" name="password" id="password" placeholder="Password" required />
+      <div>
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn">Reset</button>
       </div>
-      <div class="video-item">
-        <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="april2025.jpg" alt="April 2025">
-        <div class="video-info">
-          <strong>Top New Games of April 2025</strong>
-          <div class="tags">
-            <span class="tag">TOP</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-item">
-        <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="roblox_obby.jpg" alt="Hell's Obby">
-        <div class="video-info">
-          <strong>Hell's Obby Now on Roblox</strong>
-          <div class="tags">
-            <span class="tag">FUNNY</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-item">
-        <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="march2025.jpg" alt="March 2025">
-        <div class="video-info">
-          <strong>Top New Games of March 2025</strong>
-          <div class="tags">
-            <span class="tag">TOP</span>
-            <span class="tag">FUNNY</span>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="toggle" onclick="toggleForm()">Don't have an account? Register</div>
+    </form>
+    <?php if ($loggedInUser): ?>
+      <p class="success">Welcome, <?= htmlspecialchars($loggedInUser) ?>!</p>
+    <?php endif; ?>
   </div>
+
+  <script>
+    const formTitle = document.getElementById('form-title');
+    const toggle = document.querySelector('.toggle');
+    const mode = document.getElementById('mode');
+    const usernameInput = document.getElementById('username');
+
+    function toggleForm() {
+      if (mode.value === 'login') {
+        mode.value = 'register';
+        formTitle.innerText = 'Register';
+        toggle.innerText = 'Already have an account? Login';
+        usernameInput.required = true;
+      } else {
+        mode.value = 'login';
+        formTitle.innerText = 'Login';
+        toggle.innerText = "Don't have an account? Register";
+        usernameInput.required = false;
+      }
+    }
+  </script>
 </body>
 </html>

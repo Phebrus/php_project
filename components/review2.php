@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/components/review2.css">
+<link rel="stylesheet" href="/components/css/review2.css">
 <div class="carousel-container">
   <button class="arrow" onclick="scrollCarousel(-1)">&#10094;</button>
 

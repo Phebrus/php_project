@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="/components/news.css">
+  <link rel="stylesheet" href="/components/css/news.css">
   <h2 class="section-title">DAILY NEWS</h2>
 
   <div class="filter-bar">

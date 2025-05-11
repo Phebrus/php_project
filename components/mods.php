@@ -1,5 +1,5 @@
 
-  <link rel="stylesheet" href="/components/mods.css">
+  <link rel="stylesheet" href="/components/css/mods.css">
   <div class="main">
   <h2>MODS</h2>
   <div class="calendar-container">
@@ -49,7 +49,6 @@
       <div class="release-date pink-date">09 | MAY</div>
     </div>
 
-    <!-- Add more game cards here -->
 
   </div>
   </div>

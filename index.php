@@ -22,8 +22,6 @@ include 'condb.php';
   </div>
         </div>
 
-    
-
     </section>
     <div style="margin-top: 20px;">
             <?php include __DIR__ . "/components/calendar.php"; ?>
@@ -118,14 +116,11 @@ include 'condb.php';
 
    <div>
      <?php include_once __DIR__ . "/components/review.php"; ?>
-            <?php include __DIR__ . "/components/mods.php"; ?>
+      <?php include __DIR__ . "/components/mods.php"; ?>
     </div>
 
   <!--  -->
   
-
-<!-- /////////// -->
-
     <?php include_once __DIR__ . "/components/news.php" ?>
 
 </section>
