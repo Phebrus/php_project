@@ -134,3 +134,53 @@ nav a.scale-up {
     margin-top: 10px;
   }
 }
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #00ffff;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-menu.show-menu {
+  display: block;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    margin-top: 5px;
+  }
+}

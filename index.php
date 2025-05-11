@@ -18,7 +18,7 @@ include 'condb.php';
         <div class="explore-section">
   <div class="explore-content">
     <h1 class="explore-heading">Handle Business, Then Handle Boss Fights</h1>
-    <button class="explore-button" onclick="window.location.href='store.php'">Explore</button>
+    <button class="explore-button" onclick="window.location.href='about.php'">Explore</button>
   </div>
         </div>
 

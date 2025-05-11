@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0b1521;
+  color: #00ffee;
+}
+
+.cart-bg {
+  background-image: linear-gradient(rgba(11, 21, 33, 0.95), rgba(11, 21, 33, 0.9)), url("../images/scifi-1.jpg");
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.cart-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #0f1b2a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00ffff88, 0 0 40px #00ffff44;
+}
+
+.neon-title {
+  font-size: 36px;
+  color: #00ffee;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffff99, 0 0 20px #00ffff;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-header th {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  background: #12263f;
+  color: #00ffee;
+  border-bottom: 2px solid #00ffff;
+  text-transform: uppercase;
+}
+
+.cart-item {
+  border-bottom: 1px solid #00ffff44;
+}
+
+.cart-item td {
+  padding: 20px; /* Increased padding for more space between rows */
+}
+
+.product-img {
+  text-align: center;
+}
+
+.game-img {
+  width: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00ffff66;
+}
+
+.product-name,
+.product-publisher,
+.product-description,
+.product-price {
+  padding: 16px;
+  text-align: center;
+  color: #b0f0ff;
+}
+
+.product-action {
+  text-align: center;
+}
+
+.btn-delete {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #ff0055;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-delete:hover {
+  background: #ff3366;
+  box-shadow: 0 0 10px #ff0055aa;
+}
+
+.total-price {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 30px;
+  color: #00ffee;
+  text-shadow: 0 0 6px #00ffff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #00ccff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #0f1620;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 20px #0ff;
+  padding: 2rem;
+  text-align: center;
+  color: #0ff;
+  border-radius: 10px;
+  width: 300px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  background-color: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-buttons button:hover {
+  background: #0ff;
+  color: #000;
+}

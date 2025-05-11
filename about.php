@@ -24,25 +24,27 @@ $result_product = mysqli_query($conn, $query_product);
          <?php include_once __DIR__ . "/components/header.php"; ?>
     </header>
       <?php include_once __DIR__ . "/components/newgames.php"; ?>
-        <section class="store-section">
-            <h1 class="store-heading">Our Store</h1>
-            <div class="product-grid">
-                <?php foreach ($result_product as $row_pro) { ?>
-                    <div class="product-card">
-                        <img src="images/<?php echo $row_pro['image']; ?>" alt="Game Image">
-                        <h3><?php echo $row_pro['game_name']; ?></h3>
-                        <details>
-                            <summary>Description</summary>
-                            <p><?php echo $row_pro['description']; ?></p>
-                        </details>
-                        <p><strong>Publisher:</strong> <?php echo $row_pro['publisher']; ?></p>
-                        <p><strong>Genre:</strong> <?php echo $row_pro['genre_name']; ?></p>
-                        <p class="price"><?php echo $row_pro['price']; ?> Baht</p>
-                        <a href="add_to_cart.php?game_name=<?= $row_pro["game_name"] ?>&price=<?= $row_pro["price"] ?>" class="add-cart-btn">Add to cart</a>
-                    </div>
-                <?php } ?>
+<section class="store-section">
+    <h1 class="store-heading">Our Store</h1>
+    <div class="product-grid">
+        <?php foreach ($result_product as $row_pro) { ?>
+            <div class="product-card">
+                <img src="images/<?php echo $row_pro['image']; ?>" alt="Game Image">
+                <h3><?php echo $row_pro['game_name']; ?></h3>
+                <details>
+                    <summary>Description</summary>
+                    <p><?php echo $row_pro['description']; ?></p>
+                </details>
+                <p><strong>Publisher:</strong> <?php echo $row_pro['publisher']; ?></p>
+                <p><strong>Genre:</strong> <?php echo $row_pro['genre_name']; ?></p>
+                <p class="price"><?php echo $row_pro['price']; ?>$</p>
+                <!-- Add to Cart Button -->
+                <a href="add_to_cart.php?game_name=<?= urlencode($row_pro['game_name']) ?>&price=<?= urlencode($row_pro['price']) ?>" class="add-cart-btn">Add to cart</a>
             </div>
-        </section>
+        <?php } ?>
+    </div>
+</section>
+
 
    <footer>
     <?php include_once __DIR__ . "/components/footer.php"; ?>
