@@ -30,15 +30,15 @@
   <h2 class="section-title">🔥 Free Games You Can Play Now</h2>
   <div class="free-grid">
     <div class="free-card">
-      <img src="https://via.placeholder.com/400x220?text=Game+1" alt="Free Game 1">
+      <img src="https://i2.cdn.turner.com/cnn/2010/TECH/gaming.gadgets/06/25/free.games.steinberg/t1larg.online.game.sites.courtesy.jpg" alt="Free Game 1">
       <div class="label free">FREE</div>
     </div>
     <div class="free-card">
-      <img src="https://via.placeholder.com/400x220?text=Game+2" alt="Free Game 2">
+      <img src="https://i.redd.it/kzsq77xen2la1.jpeg" alt="Free Game 2">
       <div class="label free">FREE</div>
     </div>
     <div class="free-card">
-      <img src="https://via.placeholder.com/400x220?text=Game+3" alt="Free Game 3">
+      <img src="https://www.lifewire.com/thmb/euCVaf02ia3F8n2ywzX_Y28r4e4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/freegamespogo-fd5546cde8f84dc0b03e4612b255d006.jpg" alt="Free Game 3">
       <div class="label free">FREE</div>
     </div>
   </div>

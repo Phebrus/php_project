@@ -39,7 +39,7 @@ include 'condb.php';
     <div class="sidebar">
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="mod_thumbnail.jpg" alt="Mods">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="Mods">
         <div class="video-info">
           <strong>Top 7 Opera GX Mods You Need to Try</strong>
           <div class="tags">
@@ -49,7 +49,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="april2025.jpg" alt="April 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="April 2025">
         <div class="video-info">
           <strong>Top New Games of April 2025</strong>
           <div class="tags">
@@ -59,7 +59,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="april2025.jpg" alt="April 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="April 2025">
         <div class="video-info">
           <strong>Top New Games of April 2025</strong>
           <div class="tags">
@@ -69,7 +69,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="april2025.jpg" alt="April 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="April 2025">
         <div class="video-info">
           <strong>Top New Games of April 2025</strong>
           <div class="tags">
@@ -79,7 +79,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="roblox_obby.jpg" alt="Hell's Obby">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="Hell's Obby">
         <div class="video-info">
           <strong>Hell's Obby Now on Roblox</strong>
           <div class="tags">
@@ -89,7 +89,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="march2025.jpg" alt="March 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="March 2025">
         <div class="video-info">
           <strong>Top New Games of March 2025</strong>
           <div class="tags">
@@ -100,7 +100,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="march2025.jpg" alt="March 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="March 2025">
         <div class="video-info">
           <strong>Top New Games of March 2025</strong>
           <div class="tags">
@@ -111,7 +111,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="march2025.jpg" alt="March 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="March 2025">
         <div class="video-info">
           <strong>Top New Games of March 2025</strong>
           <div class="tags">
@@ -122,7 +122,7 @@ include 'condb.php';
       </div>
       <div class="video-item">
         <div class="video-cover"><div class="video-icon"></div></div>
-        <img src="march2025.jpg" alt="March 2025">
+        <img src="https://cdn.xzone.cz/p/aaa/kniha-the-art-of-assassins-creed-mirage/kniha-the-art-of-assassins-creed-mirage-1280w.webp" alt="March 2025">
         <div class="video-info">
           <strong>Top New Games of March 2025</strong>
           <div class="tags">

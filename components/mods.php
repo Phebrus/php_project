@@ -1,16 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "game_store_db"; 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include "/xampp/htdocs/php_project/condb.php";
 
 // Query to get mods from the database
 $sql = "SELECT * FROM mods";

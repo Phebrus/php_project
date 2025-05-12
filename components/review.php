@@ -10,7 +10,7 @@
      data-release="May 15, 2025"
      data-reviews="Highly Anticipated"
      data-tags="FPS,Action,Medieval,Single-player">
-  <img src="https://example.com/images/doom-dark-ages.jpg" alt="Doom: The Dark Ages" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Doom: The Dark Ages" />
   <div class="game-info">
     <div class="price">$69.99</div>
     <div class="tag">FPS</div>
@@ -23,7 +23,7 @@
      data-release="March 20, 2025"
      data-reviews="Positive Reviews"
      data-tags="Action-Adventure,Stealth,Historical,Single-player">
-  <img src="https://example.com/images/ac-shadows.jpg" alt="Assassin's Creed Shadows" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Assassin's Creed Shadows" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">Stealth</div>
@@ -36,7 +36,7 @@
      data-release="February 28, 2025"
      data-reviews="Critically Acclaimed"
      data-tags="Action RPG,Multiplayer,Open World,Co-op">
-  <img src="https://example.com/images/monster-hunter-wilds.jpg" alt="Monster Hunter Wilds" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Monster Hunter Wilds" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">Co-op</div>
@@ -49,7 +49,7 @@
      data-release="March 6, 2025"
      data-reviews="10/10 Rating"
      data-tags="Co-op,Adventure,Fantasy,Sci-Fi">
-  <img src="https://example.com/images/split-fiction.jpg" alt="Split Fiction" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Split Fiction" />
   <div class="game-info">
     <div class="price">$49.99</div>
     <div class="tag">Co-op</div>
@@ -62,7 +62,7 @@
      data-release="April 24, 2025"
      data-reviews="Critically Acclaimed"
      data-tags="Turn-Based RPG,Fantasy,Single-player">
-  <img src="https://example.com/images/clair-obscur.jpg" alt="Clair Obscur: Expedition 33" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Clair Obscur: Expedition 33" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">RPG</div>
@@ -75,7 +75,7 @@
      data-release="TBA 2025"
      data-reviews="Highly Anticipated"
      data-tags="Action-Adventure,Superhero,Single-player">
-  <img src="https://example.com/images/marvel-1943.jpg" alt="Marvel 1943: Rise of Hydra" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Marvel 1943: Rise of Hydra" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">Superhero</div>
@@ -88,7 +88,7 @@
      data-release="September 12, 2025"
      data-reviews="Highly Anticipated"
      data-tags="FPS,Looter Shooter,Co-op,Multiplayer">
-  <img src="https://example.com/images/borderlands-4.jpg" alt="Borderlands 4" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Borderlands 4" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">Looter Shooter</div>
@@ -101,7 +101,7 @@
      data-release="August 8, 2025"
      data-reviews="Positive Reviews"
      data-tags="Action-Adventure,Crime,Single-player">
-  <img src="https://example.com/images/mafia-old-country.jpg" alt="Mafia: The Old Country" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Mafia: The Old Country" />
   <div class="game-info">
     <div class="price">$49.99</div>
     <div class="tag">Crime</div>
@@ -114,7 +114,7 @@
      data-release="March 25, 2025"
      data-reviews="Positive Reviews"
      data-tags="FPS,Horror,Co-op,Multiplayer">
-  <img src="https://example.com/images/killing-floor-3.jpg" alt="Killing Floor 3" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Killing Floor 3" />
   <div class="game-info">
     <div class="price">$39.99</div>
     <div class="tag">Horror</div>
@@ -127,7 +127,7 @@
      data-release="TBA 2025"
      data-reviews="Highly Anticipated"
      data-tags="RPG,Fantasy,First-person,Single-player">
-  <img src="https://example.com/images/avowed.jpg" alt="Avowed" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuPwyBgHtcGoZoejnfnkqEDk0LKdBwFWtXh8O-7RSwpEMte8VB-eOy7QdEaCX4W72avk&usqp=CAU" alt="Avowed" />
   <div class="game-info">
     <div class="price">$59.99</div>
     <div class="tag">RPG</div>
