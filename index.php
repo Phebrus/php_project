@@ -29,7 +29,7 @@ include 'condb.php';
 
     <div class="container">
     <div class="main-video">
-      <img src="box2.png" alt="Top New Games of May 2025">
+      <img src="https://i.ytimg.com/vi/gcLJY7TUfLk/maxresdefault.jpg" alt="Top New Games of May 2025">
       <div class="main-video-content">
         <h2>Top New Games of May 2025</h2>
         <p>May 2025 is packed with heavy hitters, cult comebacks, and a few surprises that could steal the spotlight. At Opera GX, we've handpicked the most exciting titles you won't want to miss. Quick breakdowns. Sharp picks. No filler.</p>
@@ -44,6 +44,26 @@ include 'condb.php';
           <strong>Top 7 Opera GX Mods You Need to Try</strong>
           <div class="tags">
             <span class="tag">MOD</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="april2025.jpg" alt="April 2025">
+        <div class="video-info">
+          <strong>Top New Games of April 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-cover"><div class="video-icon"></div></div>
+        <img src="april2025.jpg" alt="April 2025">
+        <div class="video-info">
+          <strong>Top New Games of April 2025</strong>
+          <div class="tags">
+            <span class="tag">TOP</span>
           </div>
         </div>
       </div>

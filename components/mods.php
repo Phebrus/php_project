@@ -1,89 +1,62 @@
+<?php
 
-  <link rel="stylesheet" href="/components/css/mods.css">
-  <div class="main">
-  <h2>MODS</h2>
-  <div class="calendar-container">
-    <a href="#">
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "game_store_db"; 
 
-      <div class="game-card">
-     <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-     <div class="release-date">Night Vision</div>
-    </a>
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to get mods from the database
+$sql = "SELECT * FROM mods";
+$result = $conn->query($sql);
+
+?>
+
+<link rel="stylesheet" href="/components/css/mods.css">
+
+<div class="main">
+    <h2>MODS</h2>
+    <div class="calendar-container">
+        <?php
+        // Display the mods dynamically
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                // Check mod type and assign class dynamically
+                $mod_class = '';
+                $label_class = '';
+                if ($row['mod_type'] == 'DEMO') {
+                    $mod_class = 'purple-border';
+                    $label_class = 'purple-label';
+                } elseif ($row['mod_type'] == 'CONSOLE') {
+                    $mod_class = 'pink-border';
+                    $label_class = 'pink-label';
+                } else {
+                    $mod_class = 'game-card';
+                }
+                ?>
+                <div class="game-card <?php echo $mod_class; ?>">
+                    <a href="<?php echo $row['link']; ?>">
+                        <?php if ($row['mod_type'] != 'Game') { ?>
+                            <span class="label <?php echo $label_class; ?>"><?php echo $row['mod_type']; ?></span>
+                        <?php } ?>
+                        <img src="<?php echo $row['image_url']; ?>" alt="Game" class="game-cover">
+                        <div class="release-date <?php echo $mod_class . '-date'; ?>"><?php echo $row['mod_name']; ?></div>
+                    </a>
+                </div>
+                <?php
+            }
+        } else {
+            echo "No mods found.";
+        }
+
+        // Close the database connection
+        $conn->close();
+        ?>
+    </div>
 </div>
-
-<!-- Game 2 with DEMO -->
-<div class="game-card purple-border">
-  <a href="#">
-    <span class="label purple-label">DEMO</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date purple-date">Infinite Ammo</div>
-  </a>
-</div>
-
-<!-- Game 3 with CONSOLE -->
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Ultra Graphics</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Realism Pack</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Cyber Skins</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Zombie Mode</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Hardcore AI</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Retro Filter</div>
-  </a>
-</div>
-
-<div class="game-card pink-border">
-  <a href="#">
-
-    <span class="label pink-label">CONSOLE</span>
-    <img src="https://via.placeholder.com/100x140" alt="Game" class="game-cover">
-    <div class="release-date pink-date">Neon Trails</div>
-  </a>
-</div>
-
-
-  </div>
-  </div>

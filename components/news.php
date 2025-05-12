@@ -17,14 +17,16 @@ $result = mysqli_query($conn, $sql);
 
 <section class="news-grid" id="newsGrid">
   <?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <a href="#">
     <div class="news-card" data-category="<?= $row['category'] ?>">
       <div class="news-header">
-        <span class="source"><?= htmlspecialchars($row['source']) ?></span>
-        <span class="category"><?= htmlspecialchars($row['category']) ?></span>
+        <span class="source"><?=($row['source']) ?></span>
+        <span class="category"><?=($row['category']) ?></span>
       </div>
-      <h3 class="news-title"><?= htmlspecialchars($row['title']) ?></h3>
-      <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="News Thumbnail">
+      <h3 class="news-title"><?=($row['title']) ?></h3>
+      <img src="<?=($row['image_url']) ?>" alt="News Thumbnail">
     </div>
+    </a>
   <?php endwhile; ?>
 </section>
 
