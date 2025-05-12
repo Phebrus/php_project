@@ -33,15 +33,15 @@ $result_product = mysqli_query($conn, $query_product);
     while ($row = mysqli_fetch_array($hand)) {
     ?>
         <div class="product-card">
-            <img src="<?= htmlspecialchars($row["image"]) ?>" alt="<?= htmlspecialchars($row["game_name"]) ?>">
-            <h3><?= htmlspecialchars($row["game_name"]) ?></h3>
+            <img src="<?= ($row["image"]) ?>" alt="<?= ($row["game_name"]) ?>">
+            <h3><?= ($row["game_name"]) ?></h3>
             <details>
                 <summary>Description</summary>
-                <p><?= htmlspecialchars($row["description"]) ?></p>
+                <p><?= ($row["description"]) ?></p>
             </details>
-            <p><strong>Publisher:</strong> <?= htmlspecialchars($row["publisher"]) ?></p>
-            <p><strong>Genre:</strong> <?= htmlspecialchars($row["genre_name"]) ?></p>
-            <p class="price"><?= htmlspecialchars($row["price"]) ?>$</p>
+            <p><strong>Publisher:</strong> <?= ($row["publisher"]) ?></p>
+            <p><strong>Genre:</strong> <?= ($row["genre_name"]) ?></p>
+            <p class="price"><?= ($row["price"]) ?>$</p>
             <a href="add_to_cart.php?game_name=<?= urlencode($row['game_name']) ?>&price=<?= urlencode($row['price']) ?>" class="add-cart-btn">Add to cart</a>
         </div>
     <?php

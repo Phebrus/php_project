@@ -1,92 +1,45 @@
-  <link rel="stylesheet" href="/components/css/news.css">
-  <h2 class="section-title">DAILY NEWS</h2>
+<?php
+include 'condb.php';
 
-  <div class="filter-bar">
-    <button class="active">All</button>
-    <button>Gaming</button>
-    <button>Technology</button>
-  </div>
+$sql = "SELECT * FROM news ORDER BY news_id DESC";
+$result = mysqli_query($conn, $sql);
+?>
 
-  <section class="news-grid">
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">GamesRadar</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Talk To Me director's new horror movie Bring Her Back is being called...</h3>
-      <img src="https://i.imgur.com/uDK58GE.jpeg" alt="News Thumbnail">
-    </div>
+<link rel="stylesheet" href="/components/css/news.css">
 
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Digital Trends</span>
-        <span class="category">Gaming</span>
-      </div>
-      <h3 class="news-title">8 intense and gripping movies like Sinners to watch next</h3>
-      <img src="https://i.imgur.com/VUONVkl.jpeg" alt="News Thumbnail">
-    </div>
+<h2 class="section-title">DAILY NEWS</h2>
 
-    <div class="news-card">
+<div class="filter-bar">
+  <button class="active" onclick="filterNews('All')">All</button>
+  <button onclick="filterNews('Gaming')">Gaming</button>
+  <button onclick="filterNews('Technology')">Technology</button>
+</div>
+
+<section class="news-grid" id="newsGrid">
+  <?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <div class="news-card" data-category="<?= $row['category'] ?>">
       <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
+        <span class="source"><?= htmlspecialchars($row['source']) ?></span>
+        <span class="category"><?= htmlspecialchars($row['category']) ?></span>
       </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
+      <h3 class="news-title"><?= htmlspecialchars($row['title']) ?></h3>
+      <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="News Thumbnail">
     </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
-    <div class="news-card">
-      <div class="news-header">
-        <span class="source">Gamespot</span>
-        <span class="category">News</span>
-      </div>
-      <h3 class="news-title">Split Fiction Sales Are Nearly Double What EA Expected So Far</h3>
-      <img src="https://i.imgur.com/kAfXnCE.jpeg" alt="News Thumbnail">
-    </div>
+  <?php endwhile; ?>
+</section>
+
+<script>
+function filterNews(category) {
+  const cards = document.querySelectorAll('.news-card');
+  cards.forEach(card => {
+    if (category === 'All' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  document.querySelectorAll('.filter-bar button').forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.filter-bar button:contains('${category}')`)?.classList.add('active');
+}
+</script>

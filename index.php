@@ -7,7 +7,7 @@ include 'condb.php';
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/css_pages/index.css">
 </head>
 
 <body>
