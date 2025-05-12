@@ -102,8 +102,7 @@ body {
 }
 
 .back-link {
-  display: inline-block;
-  margin-top: 20px;
+  display: inline-block;  
   color: #00ccff;
   text-decoration: none;
   font-size: 16px;
@@ -114,6 +113,27 @@ body {
   color: #00ffff;
   text-shadow: 0 0 6px #00ffff;
 }
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cart-summary .total-price {
+  margin: 0;
+}
+
+.cart-summary .back-link {
+  margin-left: 20px;
+}
+
+.game-img {
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
 
 .modal-overlay {
   position: fixed;
@@ -156,4 +176,24 @@ body {
 .modal-buttons button:hover {
   background: #0ff;
   color: #000;
+}
+
+.order-now-btn {
+  background-color: transparent;
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff40;
+}
+
+.order-now-btn:hover {
+  background-color: #00f7ff;
+  color: #000;
+  box-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff80;
 }

@@ -23,7 +23,7 @@ $total = 0;
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Cart</title>
-  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="/css_pages/cart.css" />
 </head>
 <body>
 
@@ -53,7 +53,7 @@ $total = 0;
         ?>
         <tr class="cart-item">
           <td class="product-img">
-            <img src="uploads/<?= $row['image'] ?>" alt="<?= $row['image'] ?>" class="game-img" />
+            <img src="<?=($row['image']) ?>" alt="<?= ($row['game_name']) ?>" class="game-img" />
           </td>
           <td class="product-name"><?= $row["game_name"] ?></td>
           <td class="product-publisher"><?= $row["publisher"] ?></td>
@@ -73,8 +73,14 @@ $total = 0;
         ?>
       </tbody>
     </table>
-    <h3 class="total-price">Total: <?= $total ?>$</h3>
-    <a href="about.php" class="back-link">&lt; Go back to store</a>
+    <div class="cart-summary">
+      <a href="about.php" class="back-link">&lt; Go back to store</a>
+  <h3 class="total-price">Total: <?= $total ?>$</h3>
+</div>
+
+    <form action="order.php" method="POST" style="text-align: center; margin-top: 30px;">
+  <button type="submit" class="order-now-btn">Order Now</button>
+</form>
   </div>
 </main>
 

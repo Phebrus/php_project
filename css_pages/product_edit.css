@@ -1,0 +1,84 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)), url('../images/scifi-3.jpg');
+  background-size: cover;
+  background-position: top;
+  color: #00fff7;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-bottom: 1px solid #00fff7;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.container {
+  padding-top: 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00fff7;
+}
+
+label {
+  font-weight: bold;
+  color: #00fff7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  background-color: #011f2a;
+  color: #00fff7;
+  border: 1px solid #00fff7;
+  border-radius: 4px;
+}
+
+input[readonly] {
+  background-color: #05171f;
+}
+
+button, input[type="reset"], .btn-secondary {
+  background-color: transparent;
+  color: #00fff7;
+  border: 1px solid #00fff7;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+button:hover, input[type="reset"]:hover, .btn-secondary:hover {
+  background-color: #00fff7;
+  color: #000;
+}
+
+.img-thumbnail {
+  width: 200px;
+  height: auto;
+  border: 2px solid #00fff7;
+  box-shadow: 0 0 15px #00fff7;
+}

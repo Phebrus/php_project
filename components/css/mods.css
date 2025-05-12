@@ -63,6 +63,9 @@
       font-weight: bold;
       color: #00ffff;
     }
+    div a {
+      text-decoration: none;
+    }
 
     .label {
       position: absolute;

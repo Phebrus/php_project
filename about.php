@@ -25,28 +25,33 @@ $result_product = mysqli_query($conn, $query_product);
     </header>
       <?php include_once __DIR__ . "/components/newgames.php"; ?>
 <section class="store-section">
-    <h1 class="store-heading">Our Store</h1>
+    <h1 class="store-heading">Store</h1>
     <div class="product-grid">
-        <?php foreach ($result_product as $row_pro) { ?>
-            <div class="product-card">
-                <img src="images/<?php echo $row_pro['image']; ?>" alt="Game Image">
-                <h3><?php echo $row_pro['game_name']; ?></h3>
-                <details>
-                    <summary>Description</summary>
-                    <p><?php echo $row_pro['description']; ?></p>
-                </details>
-                <p><strong>Publisher:</strong> <?php echo $row_pro['publisher']; ?></p>
-                <p><strong>Genre:</strong> <?php echo $row_pro['genre_name']; ?></p>
-                <p class="price"><?php echo $row_pro['price']; ?>$</p>
-                <!-- Add to Cart Button -->
-                <a href="add_to_cart.php?game_name=<?= urlencode($row_pro['game_name']) ?>&price=<?= urlencode($row_pro['price']) ?>" class="add-cart-btn">Add to cart</a>
-            </div>
-        <?php } ?>
+    <?php
+    $sql = "SELECT * FROM game, genre WHERE game.genre_id = genre.genre_id";
+    $hand = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_array($hand)) {
+    ?>
+        <div class="product-card">
+            <img src="<?= htmlspecialchars($row["image"]) ?>" alt="<?= htmlspecialchars($row["game_name"]) ?>">
+            <h3><?= htmlspecialchars($row["game_name"]) ?></h3>
+            <details>
+                <summary>Description</summary>
+                <p><?= htmlspecialchars($row["description"]) ?></p>
+            </details>
+            <p><strong>Publisher:</strong> <?= htmlspecialchars($row["publisher"]) ?></p>
+            <p><strong>Genre:</strong> <?= htmlspecialchars($row["genre_name"]) ?></p>
+            <p class="price"><?= htmlspecialchars($row["price"]) ?>$</p>
+            <a href="add_to_cart.php?game_name=<?= urlencode($row['game_name']) ?>&price=<?= urlencode($row['price']) ?>" class="add-cart-btn">Add to cart</a>
+        </div>
+    <?php
+    }
+    mysqli_close($conn);
+    ?>
     </div>
 </section>
 
-
-   <footer>
+<footer>
     <?php include_once __DIR__ . "/components/footer.php"; ?>
 </footer>
 </body>

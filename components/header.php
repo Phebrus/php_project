@@ -12,7 +12,6 @@ $user = isset($_SESSION['username']) ? $_SESSION['username'] : null;
     <li><a href="index.php">Home</a></li>
     <li><a href="about.php">Store</a></li>
     <li><a href="cart.php">Cart</a></li>
-    <li><a href="#">Admin</a></li>
     <li class="dropdown">
       <?php if ($user): ?>
         <a href="#" class="user-toggle"><?= htmlspecialchars($user) ?></a>
